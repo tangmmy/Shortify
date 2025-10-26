@@ -1,8 +1,12 @@
-package com.example.shortify;
+package com.example.shortify.controllers;
 
+import com.example.shortify.services.UrlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @author tangmingyi
+ */
 @RestController
 @RequestMapping("/api/shorten")
 public class UrlController {
