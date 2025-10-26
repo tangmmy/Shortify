@@ -1,4 +1,4 @@
-package com.example.shortify;
+package com.example.shortify.models;
 
 import jakarta.persistence.*;
 
