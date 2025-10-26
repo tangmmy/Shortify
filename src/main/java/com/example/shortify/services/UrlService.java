@@ -49,7 +49,7 @@ public class UrlService {
                 if(url == null){
 
                     // find with db
-                    url = urlRepository.findById(shortUrl).map(Url::getOriginalUrl).orElse("");
+                    url = urlRepository.findById(shortUrl).get().getOriginalUrl();
 
                     //then update the cache
                     redisUtil.save(shortUrl, url, 60 * 60 * 24);

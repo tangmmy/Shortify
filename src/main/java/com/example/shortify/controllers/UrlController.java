@@ -1,5 +1,6 @@
 package com.example.shortify.controllers;
 
+import com.example.shortify.models.SaveUrlRequest;
 import com.example.shortify.services.UrlService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,8 +16,8 @@ public class UrlController {
     private UrlService urlService;
 
     @PostMapping
-    public String shortenUrl(@RequestBody String originalUrl) {
-        return urlService.shortenUrl(originalUrl);
+    public String shortenUrl(@RequestBody SaveUrlRequest saveUrlRequest) {
+        return urlService.shortenUrl(saveUrlRequest.getOriginalUrl());
     }
 
     @GetMapping("/{shortUrl}")
